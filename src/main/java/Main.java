@@ -1,12 +1,23 @@
+import java.util.*;
+
 public class Main {
-    public static void main(String[] args) {
-        bankAccount acc = new bankAccount("Bob");
-        bankAccount acc2 = new bankAccount("Lisa");
-        System.out.println(acc.getBalance());
-        System.out.println(acc2.getBalance());
-        System.out.println(acc.transferFunds(acc2, 500));
-        System.out.println(acc.getBalance());
-        System.out.println(acc2.getBalance());
-        System.out.println(acc.transferFunds(acc2, 1600));
-    }
+  public static void main(String[] args) {
+    Circle circle = new Circle(5);
+    System.out.println("The area of the circle is: " + circle.area());
+
+    Rectangle rectangle = new Rectangle(4, 7);
+    System.out.println("\nRectangle details:");
+    System.out.println(rectangle);
+    System.out.println("Area of the rectangle: " + rectangle.calcArea());
+    System.out.println("Perimeter of the rectangle: " + rectangle.calcPerimeter());
+
+    rectangle.scale(2);
+    System.out.println("\nRectangle after scaling by a factor of 2:");
+    System.out.println(rectangle);
+    System.out.println("Area after scaling: " + rectangle.calcArea());
+    System.out.println("Perimeter after scaling: " + rectangle.calcPerimeter());
+
+    System.out.println("\nDrawing the scaled rectangle:");
+    rectangle.draw();
+  }
 }
